@@ -1,0 +1,33 @@
+%"Copyright 2015 Isaac Jose Manjarres"
+
+%This program is free software: you can redistribute it and/or modify
+%it under the terms of the GNU General Public License as published by
+%the Free Software Foundation, either version 3 of the License, or
+%(at your option) any later version.
+
+%The Mako Eye Tracking Toolbox is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+
+%You should have received a copy of the GNU General Public License
+%along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Flip Warning Documentation
+
+The following is a brief discussion about the warning that PTB may emit when 
+running an experiment. After a run of an experiment, PTB will produce a message
+in the MATLAB command window reporting that a certain amount of calls to Flip 
+missed their presentation deadline. We spent quite some time researching this 
+warning, and found no solution to it. We also conducted several timing tests to 
+ensure that our code isn't distorting the synchronization of the system to the 
+VBL, and found that it is not. Several of these tests involved experimenting 
+with the function Screen('Flip') and we have recorded and documented all of the 
+results of our experiments. When running our code on the same set of movies and
+images against PTB's exemplary code, we found that they also encountered Flip 
+misses, and not only that, but that our numbers were in close proximity. As a 
+result of this, and the fact that the flip warnings does not distort playback 
+quality in any apparent way, we decided to proceed, as our code is up to par 
+with PTB's exemplary code. For detailed documentation and analyses of the data 
+collected from our experiments, please contact Dr. Eakta Jain at 
+ejain@cise.ufl.edu.
